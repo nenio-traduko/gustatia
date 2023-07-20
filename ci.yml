@@ -14,8 +14,8 @@ steps:
   inputs:
     actions: 'clean build test'
     scheme: ''
-    sdk: 'iphoneos'
-    configuration: 'Debug'
+    sdk: $(SDK)
+    configuration: $(Configuration)
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, 11, 12, default, specifyPath
     destinationPlatformOption: iOS

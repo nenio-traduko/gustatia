@@ -19,6 +19,7 @@
 		910AAB2C2A67719700F1ACA5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 910AAB2B2A67719700F1ACA5 /* LICENSE */; };
 		91D757222A68BF6F00E4FC5D /* staging.yml in Resources */ = {isa = PBXBuildFile; fileRef = 91D757202A68BF6F00E4FC5D /* staging.yml */; };
 		91D757232A68BF6F00E4FC5D /* ci.yml in Resources */ = {isa = PBXBuildFile; fileRef = 91D757212A68BF6F00E4FC5D /* ci.yml */; };
+		91D757272A698E8E00E4FC5D /* deploy.yml in Resources */ = {isa = PBXBuildFile; fileRef = 91D757262A698E8E00E4FC5D /* deploy.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		910AAB2B2A67719700F1ACA5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		91D757202A68BF6F00E4FC5D /* staging.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = staging.yml; sourceTree = "<group>"; };
 		91D757212A68BF6F00E4FC5D /* ci.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = ci.yml; sourceTree = "<group>"; };
+		91D757262A698E8E00E4FC5D /* deploy.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = deploy.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		91D7571F2A68BF6300E4FC5D /* pipelines */ = {
 			isa = PBXGroup;
 			children = (
+				91D757262A698E8E00E4FC5D /* deploy.yml */,
 				91D757212A68BF6F00E4FC5D /* ci.yml */,
 				91D757202A68BF6F00E4FC5D /* staging.yml */,
 			);
@@ -261,6 +264,7 @@
 				910AAB2C2A67719700F1ACA5 /* LICENSE in Resources */,
 				910AAB032A676D9A00F1ACA5 /* Preview Assets.xcassets in Resources */,
 				910AAB002A676D9A00F1ACA5 /* Assets.xcassets in Resources */,
+				91D757272A698E8E00E4FC5D /* deploy.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

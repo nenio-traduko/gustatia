@@ -1,0 +1,31 @@
+# Xcode
+# Build, test, and archive an Xcode workspace on macOS.
+# Add steps that install certificates, test, sign, and distribute an app, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
+trigger: none
+
+pool:
+  vmImage: 'macos-latest'
+
+steps:
+- task: DownloadBuildArtifacts@1
+  inputs:
+    buildType: 'specific'
+    project: 'e993f3c9-4c56-4b7a-80c5-8e0ae8086c64'
+    pipeline: $(PIPELINE)
+    specificBuildWithTriggering: true
+    buildVersionToDownload: 'latestFromBranch'
+    branchName: 'refs/heads/main'
+    downloadType: 'specific'
+    itemPattern: $(ITEM_PATTERN)
+    downloadPath: '$(System.ArtifactsDirectory)'
+    cleanDestinationFolder: true
+    checkDownloadedFiles: true
+- task: AppStoreRelease@1
+  inputs:
+    serviceEndpoint: 'App Store Connection'
+    releaseTrack: $(TRACK)
+    appType: 'iOS'
+    ipaPath: '$(System.ArtifactsDirectory)/$(ITEM_PATTERN)'
+    shouldSkipWaitingForProcessing: true
+    shouldSkipSubmission: true

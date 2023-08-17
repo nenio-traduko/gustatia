@@ -24,7 +24,6 @@
 		91D757222A68BF6F00E4FC5D /* staging.yml in Resources */ = {isa = PBXBuildFile; fileRef = 91D757202A68BF6F00E4FC5D /* staging.yml */; };
 		91D757232A68BF6F00E4FC5D /* ci.yml in Resources */ = {isa = PBXBuildFile; fileRef = 91D757212A68BF6F00E4FC5D /* ci.yml */; };
 		91D757272A698E8E00E4FC5D /* deploy.yml in Resources */ = {isa = PBXBuildFile; fileRef = 91D757262A698E8E00E4FC5D /* deploy.yml */; };
-		91EF2BEF2A8E1C68007A298C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910AAAFD2A676D9900F1ACA5 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -337,7 +336,6 @@
 			files = (
 				910AAB132A676D9B00F1ACA5 /* GustatiaTests.swift in Sources */,
 				914BE3CB2A8B997F00272188 /* Recipe.swift in Sources */,
-				91EF2BEF2A8E1C68007A298C /* ContentView.swift in Sources */,
 				914BE3CE2A8B9BAE00272188 /* RecipeListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

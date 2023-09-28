@@ -12,7 +12,8 @@ struct GustatiaApp: App {
 
     var body: some Scene {
         WindowGroup {
-            RecipeListItem(recipeTitle: "Gustatia Test Recipe")
+            RecipeListView()
+                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }
 }

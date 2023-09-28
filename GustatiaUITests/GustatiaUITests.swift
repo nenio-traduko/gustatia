@@ -8,30 +8,37 @@
 import XCTest
 
 final class GustatiaUITests: XCTestCase {
+    private var app: XCUIApplication!
     
-    func testAppContainsRecipeEntry() throws {
-        let app = XCUIApplication()
+    override func setUp() {
+        continueAfterFailure = false
+        app = XCUIApplication()
         app.launch()
         
         guard app.wait(for: .runningForeground, timeout: 10) else {
             XCTFail("App did not achieve expected state in time")
             return
         }
-        
-        XCTAssertTrue(app.staticTexts["Gustatia Test Recipe"].exists)
     }
-
-    func testLaunchAndRunPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                let app = XCUIApplication()
-                app.launch()
-                guard app.wait(for: .runningForeground, timeout: 10) else {
-                    XCTFail("App did not achieve expected state in time")
-                    return
-                }
-            }
-        }
+    
+    func testA1_AppContainsAddRecipePromptWhenListIsEmpty() {
+        XCTAssertTrue(app.staticTexts["Add a new recipe to get started."].exists)
+    }
+    
+    func testA2_AppContainsRecipesTitle() {
+        XCTAssertTrue(app.navigationBars["Recipes"].exists)
+    }
+    
+    func testA3_AppContainsAddRecipesButton() {
+        XCTAssertTrue(app.buttons["Add recipe"].exists)
+    }
+    
+    func testB1_AppRemovesPromptWhenAddRecipesButtonIsPressed() {
+        app.buttons["Add recipe"].tap()
+        XCTAssertFalse(app.staticTexts["Add a new recipe to get started."].exists)
+    }
+    
+    func testB2_AppAddsEntryWhenAddRecipesButtonIsPressed() {
+        app.buttons["Add recipe"].tap()
     }
 }

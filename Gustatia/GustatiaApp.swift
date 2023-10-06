@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct GustatiaApp: App {
-
     var body: some Scene {
         WindowGroup {
             RecipeListView()
-                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
+        .modelContainer(for: Recipe.self)
+        .environment(\.recipeController, RecipeController())
     }
 }

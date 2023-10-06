@@ -6,72 +6,67 @@
 //
 
 import SwiftUI
-import CoreData
+import SwiftData
 
 struct RecipeListView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-    
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.id)])
-    private var recipes: FetchedResults<Recipe>
+    @Environment(\.modelContext) private var modelContext
+    @Environment(\.recipeController) private var recipeController
+    @Query(
+        filter: #Predicate<Recipe> { recipe in !recipe.isDraft},
+        sort: \Recipe.title,
+        order: .forward
+    ) private var recipes: [Recipe]
     
     var body: some View {
         NavigationStack {
             List {
                 ForEach(recipes) { recipe in
-                    NavigationLink(value: recipe) {
-                        RecipeListItem(recipeTitle: recipe.title!)
+                    NavigationLink(value: ViewRecipeNavigator(recipe: recipe)) {
+                        RecipeListItem(recipeTitle: recipe.title)
+                    }
+                }
+                .onDelete { indexSet in
+                    withAnimation {
+                        recipeController.delete(
+                            recipe: recipes,
+                            at: indexSet,
+                            using: modelContext
+                        )
                     }
                 }
             }
             .toolbar {
                 ToolbarItem {
-                    NavigationLink {
-                    } label: {
+                    NavigationLink(
+                        value: EditRecipeNavigator(
+                            recipe: recipeController.getDraftRecipe(
+                                using: modelContext
+                            )
+                        )
+                    ) {
                         Label("Add recipe", systemImage: "plus")
                             .accessibilityLabel("Add recipe")
                     }
                 }
             }
             .navigationTitle(Text("Recipes"))
-            .navigationBarTitleDisplayMode(.automatic)
             .overlay {
                 if recipes.isEmpty {
-                    Text("Add a new recipe to get started.")
+                    Text("Add a recipe to get started.")
                 }
             }
-            .navigationDestination(for: Recipe.self) { recipe in
-                RecipeDetailView(recipe: recipe)
+            .navigationDestination(for: ViewRecipeNavigator.self) { navigator in
+                RecipeDetailView(recipe: navigator.recipe)
             }
-        }
-    }
-    
-    private func onAddRecipe() {
-        withAnimation {
-            let newRecipe = Recipe(context: viewContext)
-            var title = ""
-            
-            for _ in 0...Int.random(in: 0...25) {
-                guard let character = CharacterSet.alphanumerics.description.randomElement() else {
-                    continue
-                }
-                
-                title += String(character)
-            }
-            
-            newRecipe.title = title
-            newRecipe.id = UUID()
-            
-            do {
-                try viewContext.save()
-            } catch {
-                print("Error while attempting to add new recipe \(String(describing: newRecipe))")
+            .navigationDestination(for: EditRecipeNavigator.self) { navigator in
+                RecipeEditView(recipe: navigator.recipe)
             }
         }
     }
 }
 
-struct RecipeListView_Previews: PreviewProvider {
-    static var previews: some View {
-        RecipeListView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+#Preview {
+    PreviewGroup(container: PreviewContainer.container) {
+        RecipeListView()
     }
 }

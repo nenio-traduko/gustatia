@@ -20,8 +20,8 @@ struct RecipeListItem: View {
     }
 }
 
-struct RecipeListItem_Previews: PreviewProvider {
-    static var previews: some View {
-        RecipeListItem(recipeTitle: "Some Test Title")
+#Preview {
+    PreviewGroup(container: PreviewContainer.container) {
+        RecipeListItem(recipeTitle: Recipe.preview.title)
     }
 }

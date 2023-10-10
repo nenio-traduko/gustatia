@@ -9,12 +9,14 @@
     }
   ],
   "defaultOptions" : {
+    "repeatInNewRunnerProcess" : true,
     "targetForVariableExpansion" : {
       "containerPath" : "container:Gustatia.xcodeproj",
       "identifier" : "910AAAF72A676D9900F1ACA5",
       "name" : "Gustatia"
     },
     "testExecutionOrdering" : "random",
+    "testRepetitionMode" : "retryOnFailure",
     "uiTestingScreenshotsLifetime" : "keepNever",
     "userAttachmentLifetime" : "keepNever"
   },

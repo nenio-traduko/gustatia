@@ -5,7 +5,7 @@
 trigger: none
 
 pool:
-  vmImage: 'macos-latest'
+  vmImage: $(VmImage)
 
 steps:
 - task: DownloadBuildArtifacts@1

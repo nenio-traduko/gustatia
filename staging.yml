@@ -2,8 +2,7 @@
 # Build, test, and archive an Xcode workspace on macOS.
 # Add steps that install certificates, test, sign, and distribute an app, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
-trigger:
-  - main
+trigger: none
 
 resources:
   pipelines:
@@ -15,7 +14,7 @@ resources:
         - main
 
 pool:
-  vmImage: 'macos-latest'
+  vmImage: $(VmImage)
 
 steps:
 - task: InstallAppleCertificate@2
@@ -34,15 +33,16 @@ steps:
     sdk: $(SDK)
     configuration: $(Configuration)
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
-    xcodeVersion: 'default' # Options: 8, 9, 10, 11, 12, default, specifyPath
+    xcodeVersion: $(XcodeVersion) # Options: 8, 9, 10, 11, 12, default, specifyPath
     packageApp: true
     signingOption: manual
     signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
     provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
     destinationPlatformOption: iOS
     destinationTypeOption: simulators
-    destinationSimulators: 'iPhone 14 Pro Max'
-    useXcpretty: true
+    destinationSimulators: $(SimulatorName)
+    args: $(arguments)
+    useXcpretty: $(XcprettyEnabled)
 - task: CopyFiles@2
   inputs:
     contents: '**/*.ipa'

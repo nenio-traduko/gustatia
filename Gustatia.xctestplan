@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "BBC143C0-6893-44D5-BA30-BB232D290010",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Gustatia.xcodeproj",
+      "identifier" : "910AAAF72A676D9900F1ACA5",
+      "name" : "Gustatia"
+    },
+    "testExecutionOrdering" : "random",
+    "uiTestingScreenshotsLifetime" : "keepNever",
+    "userAttachmentLifetime" : "keepNever"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Gustatia.xcodeproj",
+        "identifier" : "910AAB0D2A676D9B00F1ACA5",
+        "name" : "GustatiaTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Gustatia.xcodeproj",
+        "identifier" : "910AAB172A676D9B00F1ACA5",
+        "name" : "GustatiaUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

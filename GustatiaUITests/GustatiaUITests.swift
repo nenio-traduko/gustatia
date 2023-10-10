@@ -22,7 +22,7 @@ final class GustatiaUITests: XCTestCase {
     }
     
     func testA1_AppContainsAddRecipePromptWhenListIsEmpty() {
-        XCTAssertTrue(app.staticTexts["Add a new recipe to get started."].exists)
+        XCTAssertTrue(app.staticTexts["Add a recipe to get started."].exists)
     }
     
     func testA2_AppContainsRecipesTitle() {

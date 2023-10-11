@@ -13,12 +13,12 @@ steps:
 - task: Xcode@5
   inputs:
     actions: 'clean build test'
-    scheme: ''
+    scheme: $(Scheme)
     sdk: $(SDK)
     configuration: $(Configuration)
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcodeVersion: $(XcodeVersion) # Options: 8, 9, 10, 11, 12, default, specifyPath
-    signingOption: auto
+    signingOption: $(SigningOption)
     destinationPlatformOption: iOS
     destinationTypeOption: simulators
     destinationSimulators: $(SimulatorName)

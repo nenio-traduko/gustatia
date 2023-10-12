@@ -149,8 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				910AAB022A676D9A00F1ACA5 /* Preview Assets.xcassets */,
-				91182A032AC71172006770DB /* PreviewContainer.swift */,
-				91182A052AC713E9006770DB /* PreviewGroup.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -210,6 +208,7 @@
 		914BE3C72A8B995900272188 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				91E8854D2AD7E87F0045FAA2 /* Preview */,
 				911B7B442ACF06BA002BF3B9 /* Navigation */,
 				914BE3CC2A8B9BAE00272188 /* RecipeListItem.swift */,
 				911314E52A8F5A5E001DFF3F /* RecipeListView.swift */,
@@ -239,6 +238,15 @@
 				91D757202A68BF6F00E4FC5D /* staging.yml */,
 			);
 			name = pipelines;
+			sourceTree = "<group>";
+		};
+		91E8854D2AD7E87F0045FAA2 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				91182A032AC71172006770DB /* PreviewContainer.swift */,
+				91182A052AC713E9006770DB /* PreviewGroup.swift */,
+			);
+			path = Preview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

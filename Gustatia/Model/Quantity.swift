@@ -10,10 +10,10 @@ import SwiftData
 
 @Model
 final class Quantity {
-    var value: Double
+    var value: Double?
     var unit: String
     
-    init(value: Double, unit: String) {
+    init(value: Double? = nil, unit: String) {
         self.value = value
         self.unit = unit
     }
@@ -35,6 +35,6 @@ extension Quantity {
     
     @Transient
     var isValid: Bool {
-        value > 0 && !unit.isEmpty
+        value != nil && value! > 0 && !unit.isEmpty
     }
 }

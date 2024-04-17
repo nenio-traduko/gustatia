@@ -63,6 +63,23 @@ extension Recipe {
     )
     
     @Transient
+    static let empty = Recipe(
+        id: UUID(),
+        title: "",
+        servings: 0.0,
+        prepTime: 0.0,
+        cookTime: 0.0,
+        ingredients: [
+            Ingredient(id: 0, name: "", quantity: Quantity(unit: ""))
+        ],
+        instructions: [
+            Instruction(id: 0, content: "")
+        ],
+        editDate: .now,
+        isDraft: true
+    )
+    
+    @Transient
     var orderedIngredient: [Ingredient] {
         self.ingredient.sorted { (leftIngredient, rightIngredient) in
             leftIngredient.id < rightIngredient.id

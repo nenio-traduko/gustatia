@@ -10,8 +10,7 @@
 		910AAAFC2A676D9900F1ACA5 /* GustatiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910AAAFB2A676D9900F1ACA5 /* GustatiaApp.swift */; };
 		910AAB002A676D9A00F1ACA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 910AAAFF2A676D9A00F1ACA5 /* Assets.xcassets */; };
 		910AAB032A676D9A00F1ACA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 910AAB022A676D9A00F1ACA5 /* Preview Assets.xcassets */; };
-		910AAB132A676D9B00F1ACA5 /* GustatiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910AAB122A676D9B00F1ACA5 /* GustatiaTests.swift */; };
-		910AAB1D2A676D9B00F1ACA5 /* GustatiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910AAB1C2A676D9B00F1ACA5 /* GustatiaUITests.swift */; };
+		910AAB1D2A676D9B00F1ACA5 /* GustatiaAppTests+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910AAB1C2A676D9B00F1ACA5 /* GustatiaAppTests+Home.swift */; };
 		911314E62A8F5A5E001DFF3F /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911314E52A8F5A5E001DFF3F /* RecipeListView.swift */; };
 		911408542AC5C78B00581D17 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911408532AC5C78B00581D17 /* Recipe.swift */; };
 		9114085A2AC5CC4100581D17 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911408592AC5CC4100581D17 /* Ingredient.swift */; };
@@ -27,6 +26,11 @@
 		9144CF7E2ACE9906009D047E /* IngredientEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9144CF7D2ACE9906009D047E /* IngredientEditView.swift */; };
 		9144CF802ACEA168009D047E /* InstructionEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9144CF7F2ACEA168009D047E /* InstructionEditView.swift */; };
 		914BE3CD2A8B9BAE00272188 /* RecipeListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914BE3CC2A8B9BAE00272188 /* RecipeListItem.swift */; };
+		917893F22AE65E5B00D97FF4 /* XCUITestInteractionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917893F12AE65E5B00D97FF4 /* XCUITestInteractionUtility.swift */; };
+		917893F52AE664B600D97FF4 /* XCTestCase+ScreenshotUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917893F42AE664B600D97FF4 /* XCTestCase+ScreenshotUtilities.swift */; };
+		919612192ADE933300F323F0 /* TimeInterval+FormattedStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919612182ADE933300F323F0 /* TimeInterval+FormattedStringTests.swift */; };
+		9196121A2ADE939A00F323F0 /* TimeInterval+FormattedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91182A082AC97614006770DB /* TimeInterval+FormattedString.swift */; };
+		9196121C2AE2699300F323F0 /* GustatiaAppTests+NewRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9196121B2AE2699300F323F0 /* GustatiaAppTests+NewRecipe.swift */; };
 		91D6A4732AAB0427004265B1 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6A4722AAB0427004265B1 /* RecipeDetailView.swift */; };
 		91D6A4752AAB11BF004265B1 /* RecipeEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6A4742AAB11BF004265B1 /* RecipeEditView.swift */; };
 		91D757222A68BF6F00E4FC5D /* staging.yml in Resources */ = {isa = PBXBuildFile; fileRef = 91D757202A68BF6F00E4FC5D /* staging.yml */; };
@@ -58,9 +62,8 @@
 		910AAB022A676D9A00F1ACA5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		910AAB092A676D9A00F1ACA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		910AAB0E2A676D9B00F1ACA5 /* GustatiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GustatiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		910AAB122A676D9B00F1ACA5 /* GustatiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GustatiaTests.swift; sourceTree = "<group>"; };
 		910AAB182A676D9B00F1ACA5 /* GustatiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GustatiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		910AAB1C2A676D9B00F1ACA5 /* GustatiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GustatiaUITests.swift; sourceTree = "<group>"; };
+		910AAB1C2A676D9B00F1ACA5 /* GustatiaAppTests+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GustatiaAppTests+Home.swift"; sourceTree = "<group>"; };
 		910AB2922AD440B900408DF3 /* Gustatia.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gustatia.xctestplan; sourceTree = "<group>"; };
 		911314E52A8F5A5E001DFF3F /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
 		911408532AC5C78B00581D17 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
@@ -77,6 +80,10 @@
 		9144CF7D2ACE9906009D047E /* IngredientEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientEditView.swift; sourceTree = "<group>"; };
 		9144CF7F2ACEA168009D047E /* InstructionEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionEditView.swift; sourceTree = "<group>"; };
 		914BE3CC2A8B9BAE00272188 /* RecipeListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListItem.swift; sourceTree = "<group>"; };
+		917893F12AE65E5B00D97FF4 /* XCUITestInteractionUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUITestInteractionUtility.swift; sourceTree = "<group>"; };
+		917893F42AE664B600D97FF4 /* XCTestCase+ScreenshotUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+ScreenshotUtilities.swift"; sourceTree = "<group>"; };
+		919612182ADE933300F323F0 /* TimeInterval+FormattedStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+FormattedStringTests.swift"; sourceTree = "<group>"; };
+		9196121B2AE2699300F323F0 /* GustatiaAppTests+NewRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GustatiaAppTests+NewRecipe.swift"; sourceTree = "<group>"; };
 		91D6A4722AAB0427004265B1 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		91D6A4742AAB11BF004265B1 /* RecipeEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEditView.swift; sourceTree = "<group>"; };
 		91D757202A68BF6F00E4FC5D /* staging.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = staging.yml; sourceTree = "<group>"; };
@@ -156,7 +163,7 @@
 		910AAB112A676D9B00F1ACA5 /* GustatiaTests */ = {
 			isa = PBXGroup;
 			children = (
-				910AAB122A676D9B00F1ACA5 /* GustatiaTests.swift */,
+				919612182ADE933300F323F0 /* TimeInterval+FormattedStringTests.swift */,
 			);
 			path = GustatiaTests;
 			sourceTree = "<group>";
@@ -164,7 +171,10 @@
 		910AAB1B2A676D9B00F1ACA5 /* GustatiaUITests */ = {
 			isa = PBXGroup;
 			children = (
-				910AAB1C2A676D9B00F1ACA5 /* GustatiaUITests.swift */,
+				917893F32AE660A300D97FF4 /* Extensions */,
+				917893F02AE65DA200D97FF4 /* Utility */,
+				910AAB1C2A676D9B00F1ACA5 /* GustatiaAppTests+Home.swift */,
+				9196121B2AE2699300F323F0 /* GustatiaAppTests+NewRecipe.swift */,
 			);
 			path = GustatiaUITests;
 			sourceTree = "<group>";
@@ -228,6 +238,22 @@
 				9144CF782ACDB38A009D047E /* RecipeController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		917893F02AE65DA200D97FF4 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				917893F12AE65E5B00D97FF4 /* XCUITestInteractionUtility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		917893F32AE660A300D97FF4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				917893F42AE664B600D97FF4 /* XCTestCase+ScreenshotUtilities.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		91D7571F2A68BF6300E4FC5D /* pipelines */ = {
@@ -407,7 +433,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				910AAB132A676D9B00F1ACA5 /* GustatiaTests.swift in Sources */,
+				9196121A2ADE939A00F323F0 /* TimeInterval+FormattedString.swift in Sources */,
+				919612192ADE933300F323F0 /* TimeInterval+FormattedStringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +442,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				910AAB1D2A676D9B00F1ACA5 /* GustatiaUITests.swift in Sources */,
+				917893F22AE65E5B00D97FF4 /* XCUITestInteractionUtility.swift in Sources */,
+				910AAB1D2A676D9B00F1ACA5 /* GustatiaAppTests+Home.swift in Sources */,
+				9196121C2AE2699300F323F0 /* GustatiaAppTests+NewRecipe.swift in Sources */,
+				917893F52AE664B600D97FF4 /* XCTestCase+ScreenshotUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

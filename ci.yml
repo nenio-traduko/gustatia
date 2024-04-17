@@ -10,6 +10,11 @@ pool:
   vmImage: $(VmImage)
 
 steps:
+- task: Bash@3
+  displayName: Install Slather
+  inputs:
+    targetType: 'inline'
+    script: 'gem install slather'
 - task: Xcode@5
   inputs:
     actions: 'clean build test'
@@ -24,3 +29,13 @@ steps:
     destinationSimulators: $(SimulatorName)
     args: $(arguments)
     useXcpretty: $(XcprettyEnabled)
+    publishJUnitResults: true
+- task: Bash@3
+  displayName: Create Cobertura Report
+  inputs:
+    targetType: 'inline'
+    script: 'slather coverage -x --scheme Gustatia ./Gustatia.xcodeproj'
+- task: PublishCodeCoverageResults@2
+  inputs:
+    summaryFileLocation: 'cobertura.xml'
+    failIfCoverageEmpty: true

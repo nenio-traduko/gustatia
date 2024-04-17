@@ -14,12 +14,15 @@ struct IngredientEditView: View {
     var body: some View {
         GeometryReader { geometry in
             HStack(alignment: .center) {
-                TextField("Ingredient", text: $ingredient.name)
+                TextField("Name", text: $ingredient.name)
                     .frame(width: geometry.size.width * 0.45)
+                    .accessibilityLabel("Ingredient \(ingredient.id) Name")
                 TextField("Amount", value: $ingredient.quantity.value, format: .number.precision(.significantDigits(3)))
-                    .frame(width: geometry.size.width * 0.2)
+                    .frame(width: geometry.size.width * 0.25)
+                    .accessibilityLabel("Ingredient \(ingredient.id) Amount")
                 TextField("Units", text: $ingredient.quantity.unit)
-                    .frame(width: geometry.size.width * 0.3)
+                    .frame(width: geometry.size.width * 0.25)
+                    .accessibilityLabel("Ingredient \(ingredient.id) Units")
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
         }

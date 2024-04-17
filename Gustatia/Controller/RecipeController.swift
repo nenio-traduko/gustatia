@@ -31,7 +31,7 @@ class RecipeController {
             prepTime: 0.0,
             cookTime: 0.0,
             ingredients: [
-                Ingredient(id: 0, name: "", quantity: Quantity(value: 0.0, unit: ""))
+                Ingredient(id: 0, name: "", quantity: Quantity(unit: ""))
             ],
             instructions: [
                 Instruction(id: 0, content: "")
@@ -53,7 +53,7 @@ class RecipeController {
         logger.info("Attempting to add ingredient to specified recipe")
         logger.debug("recipe - \(String(describing: recipe))")
         let ingredientCount = recipe.ingredient.count
-        let ingredient = Ingredient(id: ingredientCount, name: "", quantity: Quantity(value: 0.0, unit: ""))
+        let ingredient = Ingredient(id: ingredientCount, name: "", quantity: Quantity(unit: ""))
         
         logger.debug("Created new ingredient - \(String(describing: ingredient))")
         

@@ -16,8 +16,8 @@ struct RecipeEditView: View {
     
     var body: some View {
         Form {
-            Section("Title") {
-                TextField("Title", text: $recipe.title, prompt: Text("Mac n' Cheese"))
+            Section("Recipe") {
+                TextField("Title", text: $recipe.title, prompt: Text("Title"))
             }
             
             Section("Servings") {
@@ -27,7 +27,7 @@ struct RecipeEditView: View {
                     if recipe.servings - 0.5 >= 0 {
                         recipe.servings -= 0.5
                     }
-                })
+                }).accessibilityLabel("Servings Stepper")
             }
             
             Section("Preparation Time") {
@@ -37,7 +37,7 @@ struct RecipeEditView: View {
                     if recipe.prepTime - 300 >= 0 {
                         recipe.prepTime -= 300
                     }
-                })
+                }).accessibilityLabel("Preparation Time Stepper")
             }
             
             Section("Cook Time") {
@@ -47,7 +47,7 @@ struct RecipeEditView: View {
                     if recipe.cookTime - 300 >= 0 {
                         recipe.cookTime -= 300
                     }
-                })
+                }).accessibilityLabel("Cook Time Stepper")
             }
             
             Section("Ingredients") {
@@ -84,11 +84,17 @@ struct RecipeEditView: View {
                     Label("Done", systemImage: "checkmark")
                 })
             }
-        }
+        }.navigationTitle("Edit Recipe")
     }
 }
 
-#Preview {
+#Preview("Empty") {
+    PreviewGroup(container: PreviewContainer.container) {
+        RecipeEditView(recipe: Recipe.empty)
+    }
+}
+
+#Preview("Filled") {
     PreviewGroup(container: PreviewContainer.container) {
         RecipeEditView(recipe: Recipe.preview)
     }

@@ -23,7 +23,7 @@ struct RecipeDetailView: View {
                     HStack(alignment: .bottom) {
                         Text(ingredient.name)
                         Spacer()
-                        Text(String(format: "%.2f \(ingredient.quantity.unit)", ingredient.quantity.value))
+                        Text(String(format: "%.2f \(ingredient.quantity.unit)", ingredient.quantity.value ?? 0.0))
                     }
                 }
             } header: {

@@ -14,6 +14,7 @@ actor PreviewContainer {
         let container = try! ModelContainer(for: Recipe.self, Ingredient.self, Quantity.self, Instruction.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
         
         container.mainContext.insert(Recipe.preview)
+        container.mainContext.insert(Recipe.empty)
         
         return container
     }()

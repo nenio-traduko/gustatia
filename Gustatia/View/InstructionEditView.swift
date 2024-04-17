@@ -11,7 +11,8 @@ struct InstructionEditView: View {
     @Bindable var instruction: Instruction
     
     var body: some View {
-        TextField("Instruction", text: $instruction.content, axis: .vertical)
+        TextField("Step", text: $instruction.content, axis: .vertical)
+            .accessibilityLabel("Step \(instruction.id)")
     }
 }
 
